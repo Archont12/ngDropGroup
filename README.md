@@ -22,31 +22,31 @@ Where `myModel` is the variable name in the parent scope to read/save selections
 
 ```(javascript)
 $scope.mySource = [{
-				name: 'group1',
-				items: [{
-					name: 'item1',
-					value: 'itemval1'
-				}, {
-					name: 'subitem2',
-					value: 'itemval2'
-				}]
-			}, {
-				name: 'group2',
-				items: [{
-					name: 'item3',
-					value: 'itemval3'
-				}, {
-					name: 'item4',
-					value: 'itemval4'
-				}]
-			}, {
-				name: 'group3',
-				items: [{
-					name: 'item5',
-					value: 'itemval5'
-				}, {
-					name: 'item6',
-					value: 'itemval6'
-				}]
-			}];
+	name: 'group1',
+	items: [{
+		name: 'item1',
+		value: 'itemval1'
+	}, {
+		name: 'subitem2',
+		value: 'itemval2'
+	}]},
+	{
+	name: 'group2',
+	items: [{
+		name: 'item3',
+		value: 'itemval3'
+	}, {
+		name: 'item4',
+		value: 'itemval4'
+	}]},
+	{
+	name: 'group3',
+	items: [{
+		name: 'item5',
+		value: 'itemval5'
+	}, {
+		name: 'item6',
+		value: 'itemval6'
+	}]
+}];
 ```
