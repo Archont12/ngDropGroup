@@ -1,32 +1,52 @@
-ngScroll
+ngDropGroup
 =============
 
-Native Angular / vanilla JS custom scrollbars.
+Native Angular / vanilla JS dropdown group control.
 
 **Licensed under [cc by-sa 3.0](http://creativecommons.org/licenses/by-sa/3.0/) with attribution required**
 
 Tested in Chrome, FF & IE9.
 
-[Demo can be seen here](http://sw4.github.io/ngScroll/)
+[Demo can be seen here](http://sw4.github.io/ngDropGroup/)
 
 Usage
 ====
 
-Include `ng-scroll` as an application dependancy, then simply add the attribute `ng-scroll` to the element you wish to apply custom scrollbars to. Note that the element must have a position defined (relative, absolute, static, fixed..) and either specified dimensions or be restrictive enough to cause its inner content to overflow.
+Include `ng-dropGroup` as an application dependancy.
 
-Depending on the desired direction of scroll, set `ng-scroll` to either `x`, `y`, or `xy`
+```(html)
+<ng-drop-group dg-placeholder="Please select" dg-model="myModel" dg-source="mySource"></ng-drop-group>
+```
 
-Features
----
+Where `myModel` is the variable name in the parent scope to read/save selections to, and `mySource` is the variable in the parent scope to fetch groups from- in the format:
 
-* Automatic resize handling (change in dimensions of container or content)
-
-* Mobile touch / drag support
-
-* Keyboard support
-
-* Mouse wheel support
-
-* Relies on native scroll events not positional offsets
-
-* No reliance on external libraries
+```(javascript)
+$scope.mySource = [{
+				name: 'group1',
+				items: [{
+					name: 'item1',
+					value: 'itemval1'
+				}, {
+					name: 'subitem2',
+					value: 'itemval2'
+				}]
+			}, {
+				name: 'group2',
+				items: [{
+					name: 'item3',
+					value: 'itemval3'
+				}, {
+					name: 'item4',
+					value: 'itemval4'
+				}]
+			}, {
+				name: 'group3',
+				items: [{
+					name: 'item5',
+					value: 'itemval5'
+				}, {
+					name: 'item6',
+					value: 'itemval6'
+				}]
+			}];
+```
