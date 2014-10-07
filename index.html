@@ -1,6 +1,62 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <title>ngDropGroup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">   
+        <link href="https://rawgithub.com/sw4/ngDropGroup/master/ngDropGroup.css" rel="stylesheet">    
+    </head>
+    <body data-ng-app="dropGroup">        
+	    <div ng-controller="dropGroupCtrl">
+			<dropdown-groups dropdown-placeholder="Select Payoff" dropdown-model="modelValue" dropdown-source="groups"></dropdown-groups>
+		</div>
+        <!-- Angular.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+        <!-- ngDropGroup.js -->
+        <script src="https://rawgithub.com/sw4/ngDropGroup/master/ngDropGroup.js"></script>
+		<script>
+		angular.module('dropGroup').controller('dropGroupCtrl', ['$scope', function ($scope) {
+			$scope.modelValue = "subval1";
+			$scope.groups = [{
+				name: 'group1',
+				items: [{
+					name: 'subitem1',
+					value: 'subval1'
+				}, {
+					name: 'subitem2',
+					value: 'subval2'
+				}]
+			}, {
+				name: 'group2',
+				items: [{
+					name: 'subitem3',
+					value: 'subval3'
+				}, {
+					name: 'subitem4',
+					value: 'subval4'
+				}]
+			}, {
+				name: 'group3',
+				items: [{
+					name: 'subitem5',
+					value: 'subval5'
+				}, {
+					name: 'subitem6',
+					value: 'subval6'
+				}]
+			}];
+		}]);		
+		</script>
+    </body>
+</html>
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+    <head>
         <title>ngScroll</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">   
