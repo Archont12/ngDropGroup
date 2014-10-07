@@ -1,7 +1,7 @@
 'use strict';
 (
 function () {
-    angular.module('ngDropGroup', ['ng'])
+    angular.module('ng-dropGroup', ['ng'])
         .directive('ngDropGroup', function() {
             return {
                 restrict: 'E',
