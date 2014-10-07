@@ -1,0 +1,154 @@
+.dg-groups {
+    border:1px solid #000;
+    font-weight:300;
+    height:40px;
+    display:inline-block;
+    position:relative;
+    box-sizing:border-box;
+    width:350px;
+    font-family:'bnpp_sans', arial;
+    font-size:12px;
+    transition:border-color 200ms ease-in;
+    background:#FBFBFB;
+}
+.dg-selection.dg-placeholder {
+    color:#7D7D7D;
+    font-style:italic;
+}
+.dg-groups:hover {
+    border-color:#0f8b7d;
+}
+.dg-groups:hover .dg-selection:after {
+    color:#0f8b7d;
+}
+.dg-selection:after {
+    content:'\25bc';
+    display:inline-block;
+    border-left:1px solid #ECECEC;
+    width:40px;
+    margin-left:15px;
+    text-align:center;
+    top:0px;
+    right:0;
+    position:absolute;
+    font-size:10px;
+    height:100%;
+}
+.dg-open .dg-selection:after {
+    content:'\25b2';
+}
+.dg-selection {
+    padding-left:15px;
+    display:block;
+    cursor:default;
+    background:none;
+    border:none;
+    width:100%;
+    line-height:40px;
+}
+.dg-groups-mask {
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:998;
+    display:none;
+}
+.dg-open .dg-groups-mask, .dg-open .dg-list {
+    display:block;
+}
+.dg-groups ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.dg-list {
+    z-index:999;
+    position:absolute;
+    box-sizing:border-box;
+    border:1px solid #000;
+    border-top:none;
+    top: 39px;
+    right:-1px;
+    left:-1px;
+    max-height:200px;
+    display:none;
+    overflow:hidden;
+    background:#FBFBFB;
+    overflow-y:auto;
+}
+.dg-items {
+    padding:10px 0;
+}
+.dg-group {
+    line-height:30px;
+}
+.dg-item {
+    line-height:20px;
+}
+.dg-group > div, .dg-items {
+    border-bottom:1px solid #CECECE;
+}
+.dg-group > div {
+    padding-left:30px;
+    position:relative;
+    cursor:default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.dg-group > div:before {
+    content:'\25b6';
+    padding-right:5px;
+    position:absolute;
+    left:15px;
+}
+.dg-group > div.dg-expanded:before {
+    content:'\25bc';
+    top:1px;
+    font-size:0.8em;
+}
+.dg-item {
+    position:relative;
+    padding-left:55px;
+    color:#8E8E8E;
+}
+.dg-item:before, .dg-item:after {
+    content:'';
+    height:10px;
+    width:10px;
+    border:1px solid #8E8E8E;
+    border-radius:100%;
+    display:inline-block;
+    position:absolute;
+    left:32px;
+    top:4px;
+}
+.dg-item:after {
+    height:6px;
+    width:6px;
+    background:#fff;
+    left:35px;
+    top:7px;
+    border:none;
+}
+.dg-item.active:after {
+    background:#000;
+}
+.dg-group div:hover {
+    color:#0f8b7d;
+}
+.dg-item:hover {
+    cursor:pointer;
+    color:#0f8b7d;
+}
+.dg-item:hover:before {
+    border-color:#0f8b7d;
+}
+.dg-item:hover:after {
+    background:#0f8b7d;
+}
