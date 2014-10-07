@@ -6,7 +6,7 @@
     position:relative;
     box-sizing:border-box;
     width:350px;
-    font-family:'bnpp_sans', arial;
+    font-family:arial;
     font-size:12px;
     transition:border-color 200ms ease-in;
     background:#FBFBFB;
